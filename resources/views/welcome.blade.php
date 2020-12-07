@@ -3,7 +3,7 @@
   
 <!-- Mirrored from preview.colorlib.com/theme/pretty/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Dec 2020 13:00:37 GMT -->
 <head>
-    <title>Pretty - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Pretty - le salon de saf</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
