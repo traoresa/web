@@ -11,9 +11,38 @@
 |
 */
 Route::redirect('lara-admin','login');
-Route::get('/','HomeController@index')->name('welcome');
+Route::post('/')->name('welcome');
 Route::post('/reservation','ReservationController@reserve')->name('reservation.reserve');
-Route::post('/contact','ContactController@sendMessage')->name('contact.send');
+Route::post('/contact','ContactController@sendMessage')->name('layouts.site.contact');
+
+Route::get('/nous', function () {
+    return view('layouts.site.nous');
+});
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/contact', function(){
+    return view('layouts.site.contact');
+});
+Route::get('/service', function(){
+    return view('layouts.site.service');
+});
+Route::get('/realisation', function(){
+    return view('layouts.site.realisation');
+});
+Route::get('/rdv', function(){
+    return view('layouts.site.rendez-vous');
+});
+Route::post('/rdv','ReservationController@reserve')->name('layouts.site.rendez-vous');
+
+Route::get('/realisation','HomeController@index')->name('layouts.site.realisation');
+
+Route::get('/blog', function(){
+    return view('layouts.site.blog');
+});
+
+Route::get('/blog','SliderController@index')->name('layouts.site.blog');
 
 Auth::routes();
 

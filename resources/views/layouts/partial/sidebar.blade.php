@@ -2,7 +2,7 @@
 
     <div class="logo">
         <a href="{{ route('welcome') }}" class="simple-text">
-            Mom restaurant
+            PRETTY
         </a>
     </div>
     <div class="sidebar-wrapper">
@@ -16,7 +16,7 @@
             <li class="{{ Request::is('admin/slider*') ? 'active': '' }}">
                 <a href="{{ route('slider.index') }}">
                     <i class="material-icons">slideshow</i>
-                    <p>Slides</p>
+                    <p>Articles</p>
                 </a>
             </li>
             <li class="{{ Request::is('admin/category*') ? 'active': '' }}">
@@ -28,7 +28,7 @@
             <li class="{{ Request::is('admin/item*') ? 'active': '' }}">
                 <a href="{{ route('item.index') }}">
                     <i class="material-icons">library_books</i>
-                    <p>plats</p>
+                    <p>Réalisations</p>
                 </a>
             </li>
             <li class="{{ Request::is('admin/reservation*') ? 'active': '' }}">
@@ -40,7 +40,7 @@
             <li class="{{ Request::is('admin/contact*') ? 'active': '' }}">
                 <a href="{{ route('contact.index') }}">
                     <i class="material-icons">message</i>
-                    <p>Contact Message</p>
+                    <p>Contacts Messages</p>
                 </a>
             </li>
 

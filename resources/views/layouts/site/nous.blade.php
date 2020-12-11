@@ -46,10 +46,11 @@
           			<h1>Pretty</h1>
           		</a>
           	</div>
-            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">CONTACTS</h1>
-            <p class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Creer par <a href="#">Saf</a></p>
-
-            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"> visitez notre sallon<a href="https://virtual-360.fr/visites_virtuelles/salon-de-coiffure-l-ile-de-beaute-visit-199/">clic ici</a></p>
+            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Salon de Beauté</h1>
+            <p class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Par <a href="#">Saf</a></p>
+            <h1 class="mb-3 mt-5 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Nous</h1>
+            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index-2.html">ACCEUIL</a></span> <span>NOUS</span></p>
+            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"> visitez notre sallon<a href="https://vimeo.com/45830194" class="btn btn-white btn-outline-white px-4 py-3">View Our Services</a></p>
           </div>
         </div>
       </div>
@@ -57,7 +58,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="/l">Pretty</a>
+	      <a class="navbar-brand" href="index-2.html">Pretty</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -77,61 +78,115 @@
 	    </div>
 	  </nav>
     <!-- END nav -->
-   <section class="ftco-section contact-section">
-    <div class="container mt-5">
-      <div class="row block-9">
-                    <div class="col-md-4 contact-info ftco-animate">
-                        <div class="row">
-                            <div class="col-md-12 mb-4">
-                  <h2 class="h4">Contact Information</h2>
-                </div>
-                <div class="col-md-12 mb-3">
-                  <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
-                </div>
-                <div class="col-md-12 mb-3">
-                  <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
-                </div>
-                <div class="col-md-12 mb-3">
-                  <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-                </div>
-                <div class="col-md-12 mb-3">
-                  <p><span>Website:</span> <a href="#">yoursite.com</a></p>
-                </div>
-                        </div>
-                    </div>
-                    <div class="col-md-1"></div>
-        <div class="col-md-6 ftco-animate">
-            <form class="contact-form" method="post" action="{{ route('layouts.site.contact') }}">
-                @csrf
-              <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="text" class="form-control reserve-form empty iconified" name="name" id="name" required="required" placeholder="  &#xf007;  Name">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="email" name="email" class="form-control reserve-form empty iconified" id="email" required="required" placeholder="  &#xf1d8;  e-mail">
-                    </div>
-                    </div>
-            </div>
-            <div class="form-group">
-                <input name="subject" type="text" class="form-control" id="subject" required="required" placeholder="  Subject">
-            </div>
-            <div class="form-group">
-                <textarea name="message" type="text" class="form-control" id="message" rows="7" required="required" placeholder="  Message"></textarea>
-            </div>
-            <div class="form-group">
-              <input type="submit" value="envoyer " class="btn btn-primary py-3 px-5">
-         
-            </div>
-          </form>
+
+    <section class="ftco-section">
+    	<div class="container">
+    		<div class="row d-flex">
+    			<div class="col-md-6 d-flex ftco-animate">
+    				<div class="img img-about align-self-stretch" style="background-image: url(frontend2/images/bg_3.jpg); width: 100%;"></div>
+    			</div>
+    			<div class="col-md-6 pl-md-5 ftco-animate">
+    				<h2 class="mb-4">Welcome to Pretty A Beauty Salon Website</h2>
+    				<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+    				<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+            <h2 class="mb-4">Nos Experts</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          </div>
+        </div>
+        <div class="row">
+        	<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
+        		<div class="staff">
+      				<div class="img mb-4" style="background-image: url(frontend2/images/person_1.jpg);"></div>
+      				<div class="info text-center">
+      					<h3><a href="teacher-single.html">Mellisa Smith</a></h3>
+      					<span class="position">Stylist</span>
+      					<div class="text">
+	        				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+	        			</div>
+      				</div>
+        		</div>
+        	</div>
+        	<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
+        		<div class="staff">
+      				<div class="img mb-4" style="background-image: url(frontend2/images/person_2.jpg);"></div>
+      				<div class="info text-center">
+      					<h3><a href="teacher-single.html">Marie Mush</a></h3>
+      					<span class="position">Fashionist</span>
+      					<div class="text">
+	        				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+	        			</div>
+      				</div>
+        		</div>
+        	</div>
+        	<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
+        		<div class="staff">
+      				<div class="img mb-4" style="background-image: url(frontend2/images/person_3.jpg);"></div>
+      				<div class="info text-center">
+      					<h3><a href="teacher-single.html">Ana Jacobson</a></h3>
+      					<span class="position">Makeup Stylist</span>
+      					<div class="text">
+	        				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+	        			</div>
+      				</div>
+        		</div>
+        	</div>
+        	<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
+        		<div class="staff">
+      				<div class="img mb-4" style="background-image: url(frontend2/images/person_4.jpg);"></div>
+      				<div class="info text-center">
+      					<h3><a href="teacher-single.html">Ivan Dorchsner</a></h3>
+      					<span class="position">Nail Specialist</span>
+      					<div class="text">
+	        				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+	        			</div>
+      				</div>
+        		</div>
+        	</div>
         </div>
       </div>
-    </div>
-  </section>
+    
 
-  <div id="map"></div>
+
+    <section class="ftco-partner bg-light">
+    	<div class="container">
+    		<div class="row partner justify-content-center">
+    			<div class="col-md-10">
+    				<div class="row">
+		        	<div class="col-md-3 ftco-animate">
+		        		<a href="#" class="partner-entry">
+		        			<img src="{{ asset('frontend2/images/partner-1.jpg') }}" class="img-fluid" alt="Colorlib template">
+		        		</a>
+		        	</div>
+		        	<div class="col-md-3 ftco-animate">
+		        		<a href="#" class="partner-entry">
+		        			<img src="{{ asset('frontend2/images/partner-2.jpg') }}" class="img-fluid" alt="Colorlib template">
+		        		</a>
+		        	</div>
+		        	<div class="col-md-3 ftco-animate">
+		        		<a href="#" class="partner-entry">
+		        			<img src="{{ asset('frontend2/images/partner-3.jpg') }}" class="img-fluid" alt="Colorlib template">
+		        		</a>
+		        	</div>
+		        	<div class="col-md-3 ftco-animate">
+		        		<a href="#" class="partner-entry">
+		        			<img src="{{ asset('frontend2/images/partner-4.jpg') }}" class="img-fluid" alt="Colorlib template">
+		        		</a>
+		        	</div>
+	        	</div>
+	        </div>
+        </div>
+    	</div>
+    </section>
+
 
     <footer class="ftco-footer ftco-section img">
     	<div class="overlay"></div>

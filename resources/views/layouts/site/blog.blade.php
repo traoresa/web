@@ -46,7 +46,7 @@
           			<h1>Pretty</h1>
           		</a>
           	</div>
-            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">CONTACTS</h1>
+            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">BLOG</h1>
             <p class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Creer par <a href="#">Saf</a></p>
 
             <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"> visitez notre sallon<a href="https://virtual-360.fr/visites_virtuelles/salon-de-coiffure-l-ile-de-beaute-visit-199/">clic ici</a></p>
@@ -66,7 +66,7 @@
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="/" class="nav-link">Acceuil</a></li>
 	          <li class="nav-item"><a href="/nous" class="nav-link">Nous</a></li>
-	          <li class="nav-item"><a href="/service" class="nav-link">Services</a></li>
+	          <li class="nav-item"><a href="/services" class="nav-link">Services</a></li>
 	          <li class="nav-item"><a href="/realisation" class="nav-link">Réalisations</a></li>
               <li class="nav-item"><a href="/blog" class="nav-link">Blog</a></li>
               <li class="nav-item"><a href="/rdv" class="nav-link">Rendez-vous</a></li>
@@ -77,62 +77,41 @@
 	    </div>
 	  </nav>
     <!-- END nav -->
-   <section class="ftco-section contact-section">
-    <div class="container mt-5">
-      <div class="row block-9">
-                    <div class="col-md-4 contact-info ftco-animate">
-                        <div class="row">
-                            <div class="col-md-12 mb-4">
-                  <h2 class="h4">Contact Information</h2>
-                </div>
-                <div class="col-md-12 mb-3">
-                  <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
-                </div>
-                <div class="col-md-12 mb-3">
-                  <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
-                </div>
-                <div class="col-md-12 mb-3">
-                  <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-                </div>
-                <div class="col-md-12 mb-3">
-                  <p><span>Website:</span> <a href="#">yoursite.com</a></p>
-                </div>
-                        </div>
-                    </div>
-                    <div class="col-md-1"></div>
-        <div class="col-md-6 ftco-animate">
-            <form class="contact-form" method="post" action="{{ route('layouts.site.contact') }}">
-                @csrf
-              <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="text" class="form-control reserve-form empty iconified" name="name" id="name" required="required" placeholder="  &#xf007;  Name">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="email" name="email" class="form-control reserve-form empty iconified" id="email" required="required" placeholder="  &#xf1d8;  e-mail">
-                    </div>
-                    </div>
+   
+    <section class="ftco-section">
+        <div class="container">
+          <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate text-center">
+              <h2 class="mb-4"></h2>
+              <p>Nous vous partagons nos experience et conseils pour votre bien-être</p>
             </div>
-            <div class="form-group">
-                <input name="subject" type="text" class="form-control" id="subject" required="required" placeholder="  Subject">
+          </div>
+          
+          <div class="row d-flex">
+            @foreach( $sliders as $key=>$slide)
+            <div class="col-md-4 d-flex ftco-animate">
+                <div class="blog-entry align-self-stretch">
+               
+                <div class="block-20">
+                    <img src="{{ asset('uploads/slider/'.$slide->image)}}" style="width: 100%;height:100%" alt="">
+                </div>
+                 <div class="text py-4 d-block">
+                    <div class="meta">
+                    <div>  {{$slide->created_at }}</div>
+                    <div>safi</a></div>
+                    <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                  </div>
+                  <h3 class="heading mt-2"><a href="#">{{ $slide->title }}</a></h3>
+                  <p>{{ $slide->sub_title }}.</p>
+                </div>
+              </div>
             </div>
-            <div class="form-group">
-                <textarea name="message" type="text" class="form-control" id="message" rows="7" required="required" placeholder="  Message"></textarea>
+            @endforeach
             </div>
-            <div class="form-group">
-              <input type="submit" value="envoyer " class="btn btn-primary py-3 px-5">
-         
-            </div>
-          </form>
+            
         </div>
-      </div>
-    </div>
-  </section>
-
-  <div id="map"></div>
-
+        
+      </section>
     <footer class="ftco-footer ftco-section img">
     	<div class="overlay"></div>
       <div class="container">

@@ -16,16 +16,11 @@
                             <i class="material-icons">content_copy</i>
                         </div>
                         <div class="card-content">
-                            <p class="category">Categories/ plats</p>
+                            <p class="category">Categories/ réalisations</p>
                             <h3 class="title">{{ $categoryCount }}/{{ $itemCount }}
                             </h3>
                         </div>
-                        <div class="card-footer">
-                            <div class="stats">
-                                <i class="material-icons text-danger">information</i>
-                                <a href="#pablo">Total dese Categories et des plats</a>
-                            </div>
-                        </div>
+                       
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
@@ -34,14 +29,10 @@
                             <i class="material-icons">slideshow</i>
                         </div>
                         <div class="card-content">
-                            <p class="category">nombre de slides</p>
+                            <p class="category">articles</p>
                             <h3 class="title">{{ $sliderCount }}</h3>
                         </div>
-                        <div class="card-footer">
-                            <div class="stats">
-                                <i class="material-icons">date_range</i> <a href="{{ route('slider.index') }}">plus de details...</a>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
@@ -50,29 +41,24 @@
                             <i class="material-icons">info_outline</i>
                         </div>
                         <div class="card-content">
-                            <p class="category">Reservation</p>
+                            <p class="category">Reservations</p>
                             <h3 class="title">{{ $reservations->count() }}</h3>
                         </div>
-                        <div class="card-footer">
-                            <div class="stats">
-                                <i class="material-icons">local_offer</i> ne pas confirmer la reservation
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="card card-stats">
                         <div class="card-header" data-background-color="blue">
-                            <i class="fa fa-twitter"></i>
+                            <i class="material-icons">message</i>
                         </div>
                         <div class="card-content">
                             <p class="category">Contacts</p>
+
+                            
                             <h3 class="title">{{ $contactCount }}</h3>
                         </div>
-                        <div class="card-footer">
-                            <div class="stats">
-                                <i class="material-icons">ajouter</i> ne pas ajouter
-                            </div>
+                       
                         </div>
                     </div>
                 </div>
@@ -112,23 +98,23 @@
                                                 <form id="status-form-{{ $reservation->id }}" action="{{ route('reservation.status',$reservation->id) }}" style="display: none;" method="POST">
                                                     @csrf
                                                 </form>
-                                                <button type="button" class="btn btn-info btn-sm" onclick="if(confirm('Are you verify this request by phone?')){
+                                                <button type="button" class="btn btn-info btn-sm" onclick="if(confirm('vous être sûr?')){
                                                         event.preventDefault();
                                                         document.getElementById('status-form-{{ $reservation->id }}').submit();
                                                         }else {
                                                         event.preventDefault();
-                                                        }"><i class="material-icons">faire</i></button>
+                                                        }"><i class="material-icons">edit</i></button>
                                             @endif
                                             <form id="delete-form-{{ $reservation->id }}" action="{{ route('reservation.destory',$reservation->id) }}" style="display: none;" method="POST">
                                                 @csrf
                                                 @method('DELETE')
                                             </form>
-                                            <button type="button" class="btn btn-danger btn-sm" onclick="if(confirm('Are you sure? You want to delete this?')){
+                                            <button type="button" class="btn btn-danger btn-sm" onclick="if(confirm('vous être sûr de vouloir supprimez?')){
                                                     event.preventDefault();
                                                     document.getElementById('delete-form-{{ $reservation->id }}').submit();
                                                     }else {
                                                     event.preventDefault();
-                                                    }"><i class="material-icons">supprimer</i></button>
+                                                    }"><i class="material-icons">delete</i></button>
                                         </td>
                                     </tr>
                                 @endforeach

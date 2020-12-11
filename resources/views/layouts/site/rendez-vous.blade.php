@@ -46,7 +46,7 @@
           			<h1>Pretty</h1>
           		</a>
           	</div>
-            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">CONTACTS</h1>
+            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">RENDEZ-VOUS</h1>
             <p class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Creer par <a href="#">Saf</a></p>
 
             <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"> visitez notre sallon<a href="https://virtual-360.fr/visites_virtuelles/salon-de-coiffure-l-ile-de-beaute-visit-199/">clic ici</a></p>
@@ -77,61 +77,78 @@
 	    </div>
 	  </nav>
     <!-- END nav -->
-   <section class="ftco-section contact-section">
-    <div class="container mt-5">
-      <div class="row block-9">
-                    <div class="col-md-4 contact-info ftco-animate">
-                        <div class="row">
-                            <div class="col-md-12 mb-4">
-                  <h2 class="h4">Contact Information</h2>
-                </div>
-                <div class="col-md-12 mb-3">
-                  <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
-                </div>
-                <div class="col-md-12 mb-3">
-                  <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
-                </div>
-                <div class="col-md-12 mb-3">
-                  <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-                </div>
-                <div class="col-md-12 mb-3">
-                  <p><span>Website:</span> <a href="#">yoursite.com</a></p>
-                </div>
-                        </div>
+   
+  
+
+    <section class="ftco-section ftco-appointment">
+        <div class="overlay"></div>
+    <div class="container">
+        <div class="row d-md-flex align-items-center">
+            <div class="col-md-2"></div>
+            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                <div class="appointment-info text-center p-5">
+                    <div class="mb-4">
+                        <h3 class="mb-3">Addresse</h3>
+                        <p>cocody,rivera2</p>
                     </div>
-                    <div class="col-md-1"></div>
-        <div class="col-md-6 ftco-animate">
-            <form class="contact-form" method="post" action="{{ route('layouts.site.contact') }}">
-                @csrf
-              <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="text" class="form-control reserve-form empty iconified" name="name" id="name" required="required" placeholder="  &#xf007;  Name">
+                    <div class="mb-4">
+                        <h3 class="mb-3">Télèphone</h3>
+                        <p class="day"><strong>+225 028 411 26</strong> or <strong>+225 796 16 19</strong></p>
+                    </div>
+                    <div>
+                        <h3 class="mb-3">heures</h3>
+                        <p class="day"><strong>Lundi - samedi</strong></p>
+                        <span>08:00 - 21:00</span>
+                    </div>
+                    <div>
+                        <h3 class="mb-3">heures</h3>
+                        <p class="day"><strong>Lundi - samedi</strong></p>
+                        <span>09:00 - 18:00</span>
+                    </div>
+                    <div>
+                        <h3 class="mb-3">Nous faisons Exerçons aussi a domicile </h3>
+                
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 appointment pl-md-5 ftco-animate">
+                <h3 class="mb-3">Rendez-vous</h3>
+                <form class="appointment-form" method="post" action="{{ route('reservation.reserve') }}">
+                    @csrf
+            <div class="row form-group d-flex">
+                <div class="col-md-6">
+                    <input type="text" class="form-control reserve-form empty iconified" name="name" id="name"
+                    placeholder="  &#xf007;  Name">
+                </div>
+                <div class="col-md-6">
+                    <input type="email" name="email" class="form-control reserve-form empty iconified" id="email"  placeholder="  &#xf1d8;  e-mail">
+                </div>
+            </div>
+            <div class="row form-group d-flex">
+                <div class="col-md-6">
+                    <div class="input-wrap">
+                        <div class="icon"><span class="ion-md-calendar"></span></div>
+                        <input type="text" class="form-control reserve-form empty iconified" name="dateandtime" id="datetimepicker1" placeholder="&#xf017;  Time">
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="email" name="email" class="form-control reserve-form empty iconified" id="email" required="required" placeholder="  &#xf1d8;  e-mail">
-                    </div>
-                    </div>
+                    <input type="tel" class="form-control reserve-form empty iconified" name="phone" id="phone"  placeholder="  &#xf095;  Phone">
+                </div>
             </div>
             <div class="form-group">
-                <input name="subject" type="text" class="form-control" id="subject" required="required" placeholder="  Subject">
+                <textarea type="text" name="message" class="form-control reserve-form empty iconified" id="message" rows="3"  placeholder="  &#xf086;  We're listening"></textarea>
             </div>
             <div class="form-group">
-                <textarea name="message" type="text" class="form-control" id="message" rows="7" required="required" placeholder="  Message"></textarea>
-            </div>
-            <div class="form-group">
-              <input type="submit" value="envoyer " class="btn btn-primary py-3 px-5">
-         
+                <button type="submit" id="submit"class="btn btn-white btn-outline-white py-3 px-4">
+                    faire une réservation
+                </button>
             </div>
           </form>
+            </div>    			
         </div>
-      </div>
     </div>
-  </section>
+</section>
 
-  <div id="map"></div>
 
     <footer class="ftco-footer ftco-section img">
     	<div class="overlay"></div>

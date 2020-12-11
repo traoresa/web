@@ -46,7 +46,7 @@
           			<h1>Pretty</h1>
           		</a>
           	</div>
-            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">CONTACTS</h1>
+            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">REALISATION</h1>
             <p class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Creer par <a href="#">Saf</a></p>
 
             <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"> visitez notre sallon<a href="https://virtual-360.fr/visites_virtuelles/salon-de-coiffure-l-ile-de-beaute-visit-199/">clic ici</a></p>
@@ -57,7 +57,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="/l">Pretty</a>
+	      <a class="navbar-brand" href="/">Pretty</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -66,7 +66,7 @@
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="/" class="nav-link">Acceuil</a></li>
 	          <li class="nav-item"><a href="/nous" class="nav-link">Nous</a></li>
-	          <li class="nav-item"><a href="/service" class="nav-link">Services</a></li>
+	          <li class="nav-item"><a href="/services" class="nav-link">Services</a></li>
 	          <li class="nav-item"><a href="/realisation" class="nav-link">Réalisations</a></li>
               <li class="nav-item"><a href="/blog" class="nav-link">Blog</a></li>
               <li class="nav-item"><a href="/rdv" class="nav-link">Rendez-vous</a></li>
@@ -77,61 +77,40 @@
 	    </div>
 	  </nav>
     <!-- END nav -->
-   <section class="ftco-section contact-section">
-    <div class="container mt-5">
-      <div class="row block-9">
-                    <div class="col-md-4 contact-info ftco-animate">
-                        <div class="row">
-                            <div class="col-md-12 mb-4">
-                  <h2 class="h4">Contact Information</h2>
-                </div>
-                <div class="col-md-12 mb-3">
-                  <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
-                </div>
-                <div class="col-md-12 mb-3">
-                  <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
-                </div>
-                <div class="col-md-12 mb-3">
-                  <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-                </div>
-                <div class="col-md-12 mb-3">
-                  <p><span>Website:</span> <a href="#">yoursite.com</a></p>
-                </div>
-                        </div>
-                    </div>
-                    <div class="col-md-1"></div>
-        <div class="col-md-6 ftco-animate">
-            <form class="contact-form" method="post" action="{{ route('layouts.site.contact') }}">
-                @csrf
-              <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="text" class="form-control reserve-form empty iconified" name="name" id="name" required="required" placeholder="  &#xf007;  Name">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="email" name="email" class="form-control reserve-form empty iconified" id="email" required="required" placeholder="  &#xf1d8;  e-mail">
-                    </div>
-                    </div>
-            </div>
-            <div class="form-group">
-                <input name="subject" type="text" class="form-control" id="subject" required="required" placeholder="  Subject">
-            </div>
-            <div class="form-group">
-                <textarea name="message" type="text" class="form-control" id="message" rows="7" required="required" placeholder="  Message"></textarea>
-            </div>
-            <div class="form-group">
-              <input type="submit" value="envoyer " class="btn btn-primary py-3 px-5">
-         
-            </div>
-          </form>
+   
+    <section class="ftco-section">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Our Work</h2>
+            <p class="work-category">
+                <span class="px-2"><a href="#" class="active">TOUT</a></span> 
+            @foreach($categories as $category)
+            	<span class="px-2".{{ $category->id }} ><a href="#">{{ $category->name }}</a>{{ $category->items->count() }}</span> 
+            	@endforeach
+            </p>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <div id="map"></div>
+        <div class="row">
+            @foreach($items as $item)
+        	<div class="col-md-4 ftco-animate">
+        		<a href="#" class="work-entry">
+        			<img src="{{ asset('uploads/item/'.$item->image) }}" class="img-fluid">
+        			<div class="info d-flex align-items-center">
+        				<div>
+        					<div class="icon mb-4 d-flex align-items-center justify-content-center">
+        						<span class="icon-search"></span>
+        					</div>
+		        			<h3> {{ $item->description }}</h3>
+	        			</div>
+        			</div>
+        		</a>
+            </div> 
+            @endforeach 	
+        </div>
+       
+    	</div>
+    </section>
 
     <footer class="ftco-footer ftco-section img">
     	<div class="overlay"></div>

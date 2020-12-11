@@ -47,30 +47,30 @@
           		</a>
           	</div>
             <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Salon de Beauté</h1>
-            <p class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Creer par <a href="#">Saf</a></p>
+            <p class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"> par <a href="#">Saf</a></p>
 
-            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"> visitez notre sallon<a href="https://vimeo.com/45830194" class="btn btn-white btn-outline-white px-4 py-3">View Our Services</a></p>
+            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"> visitez virtuellement  notre sallon <a href="https://virtual-360.fr/visites_virtuelles/salon-de-coiffure-l-ile-de-beaute-visit-199/">  clic ici</a></p>
           </div>
         </div>
       </div>
     </div>
-
+	@include('layouts.partial.msg')
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index-2.html">Pretty</a>
+	      <a class="navbar-brand" href="/">Pretty</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="index-2.html" class="nav-link">Acceuil</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">Nous</a></li>
-	          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-	          <li class="nav-item"><a href="work.html" class="nav-link">Réalisations</a></li>
-              <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-              <li class="nav-item"><a href="contact.html" class="nav-link">Rendez-vous</a></li>
-              <li class="nav-item"><a href="contact.html" class="nav-link">Contacts</a></li>
+	          <li class="nav-item active"><a href="/" class="nav-link">Acceuil</a></li>
+	          <li class="nav-item"><a href="/nous" class="nav-link">Nous</a></li>
+	          <li class="nav-item"><a href="/service" class="nav-link">Services</a></li>
+	          <li class="nav-item"><a href="/realisation" class="nav-link">Réalisations</a></li>
+              <li class="nav-item"><a href="/blog" class="nav-link">Blog</a></li>
+              <li class="nav-item"><a href="/rdv" class="nav-link">Rendez-vous</a></li>
+              <li class="nav-item"><a href="/contact" class="nav-link">Contacts</a></li>
               
 	        </ul>
 	      </div>
@@ -95,7 +95,7 @@
               <div class="icon d-flex mb-3"><span class="flaticon-cosmetics"></span></div>
               <div class="media-body">
                 <h3 class="heading">Makeup Pro</h3>
-                <p> Du Makeup pro nous vous rendons encore plus belle élegante et fraîche avec nous maquillages de qualité.</p>
+                <p> Du Makeup pro nous vous rendons encore plus belle élegante et fraîche avec nos maquillages de qualités.</p>
               </div>
             </div>      
           </div>
@@ -198,7 +198,7 @@
         <div class="row">
         	<div class="col-md-4 ftco-animate">
         		<a href="#" class="work-entry">
-        			<img src="{{ asset('frontend2/images/work-1.jpg') }}"class="img-fluid" alt="Colorlib Template">
+        			<img src="{{ asset('frontend2/images/v.jpg') }}"class="img-fluid" alt="Colorlib Template">
         			<div class="info d-flex align-items-center">
         				<div>
         					<div class="icon mb-4 d-flex align-items-center justify-content-center">
@@ -211,7 +211,7 @@
         	</div>
         	<div class="col-md-4 ftco-animate">
         		<a href="#" class="work-entry">
-        			<img src="{{ asset('frontend2/images/work-2.jpg') }}" class="img-fluid" alt="Colorlib Template">
+        			<img src="{{ asset('frontend2/images/r1.jpg') }}" class="img-fluid" alt="Colorlib Template">
         			<div class="info d-flex align-items-center">
         				<div>
         					<div class="icon mb-4 d-flex align-items-center justify-content-center">
@@ -224,7 +224,7 @@
         	</div>
         	<div class="col-md-4 ftco-animate">
         		<a href="#" class="work-entry">
-        			<img src="{{ asset('frontend2/images/work-3.jpg') }}" class="img-fluid" alt="Colorlib Template">
+        			<img src="{{ asset('frontend2/images/m1.jpg') }}" class="img-fluid" alt="Colorlib Template">
         			<div class="info d-flex align-items-center">
         				<div>
         					<div class="icon mb-4 d-flex align-items-center justify-content-center">
@@ -282,65 +282,64 @@
         	<div class="col-md-3 ftco-animate">
         		<div class="pricing-entry pb-5 text-center">
         			<div>
-	        			<h3 class="mb-4">Basic</h3>
-	        			<p><span class="price">$24.50</span> <span class="per">/ one trip</span></p>
+	        			<h3 class="mb-4">Basique</h3>
+	        			<p><span class="price">à patir de 2000</span> </p>
 	        		</div>
         			<ul>
-        				<li>Nail Cutting &amp; Styling</li>
-								<li>Hair Trimming</li>
-								<li>Spa Therapy</li>
-								<li>Body Massage</li>
+        				
+								<li>coiffure</li>
+								<li> maquillages simple</li>
+								<li> Pedicure</li>
 								<li>Manicure</li>
         			</ul>
-        			<p class="button text-center"><a href="#" class="btn btn-primary btn-outline-primary px-4 py-3">Order now</a></p>
+        			<p class="button text-center"><a href="#" class="btn btn-primary btn-outline-primary px-4 py-3">prendre RDV</a></p>
         		</div>
         	</div>
         	<div class="col-md-3 ftco-animate">
         		<div class="pricing-entry pb-5 text-center">
         			<div>
-	        			<h3 class="mb-4">Standard</h3>
-	        			<p><span class="price">$34.50</span> <span class="per">/ one trip</span></p>
+	        			<h3 class="mb-4">Chez vous</h3>
+	        			<p><span class="price">à patir de 5000</span> </p>
 	        		</div>
         			<ul>
-        				<li>Nail Cutting &amp; Styling</li>
-								<li>Hair Trimming</li>
-								<li>Spa Therapy</li>
-								<li>Body Massage</li>
-								<li>Manicure</li>
+        				
+						<li>coiffure</li>
+						<li> maquillages </li>
+						<li> Pedicure</li>
+						<li>Manicure</li>
         			</ul>
-        			<p class="button text-center"><a href="#" class="btn btn-primary btn-outline-primary px-4 py-3">Order now</a></p>
+        			<p class="button text-center"><a href="#" class="btn btn-primary btn-outline-primary px-4 py-3">prendre RDV</a></p>
         		</div>
         	</div>
         	<div class="col-md-3 ftco-animate">
         		<div class="pricing-entry active pb-5 text-center">
         			<div>
-	        			<h3 class="mb-4">Premium</h3>
-	        			<p><span class="price">$54.50</span> <span class="per">/ one trip</span></p>
+	        			<h3 class="mb-4"> étudiante</h3>
+	        			<p><span class="price">à patir de 8000</span></span></p>
 	        		</div>
         			<ul>
-        				<li>Nail Cutting &amp; Styling</li>
-								<li>Hair Trimming</li>
-								<li>Spa Therapy</li>
-								<li>Body Massage</li>
-								<li>Manicure</li>
+        				<li>coiffure</li>
+						<li> maquillages </li>
+						<li> Pedicure</li>
+						<li>Manicure</li>
         			</ul>
-        			<p class="button text-center"><a href="#" class="btn btn-primary btn-outline-primary px-4 py-3">Order now</a></p>
+        			<p class="button text-center"><a href="#" class="btn btn-primary btn-outline-primary px-4 py-3">prendre RDV</a></p>
         		</div>
         	</div>
         	<div class="col-md-3 ftco-animate">
         		<div class="pricing-entry pb-5 text-center">
         			<div>
-	        			<h3 class="mb-4">Platinum</h3>
-	        			<p><span class="price">$89.50</span> <span class="per">/ one trip</span></p>
+	        			<h3 class="mb-4">Mariage</h3>
+	        			<p><span class="price">à patir de 500000</span></p>
 	        		</div>
         			<ul>
-        				<li>Nail Cutting &amp; Styling</li>
-								<li>Hair Trimming</li>
-								<li>Spa Therapy</li>
-								<li>Body Massage</li>
-								<li>Manicure</li>
+        				<li>Teint </li>
+						<li>coiffure</li>
+						<li> maquillages </li>
+						<li> Pedicure</li>
+						<li>Manicure</li>
         			</ul>
-        			<p class="button text-center"><a href="#" class="btn btn-primary btn-outline-primary px-4 py-3">Order now</a></p>
+        			<p class="button text-center"><a href="#" class="btn btn-primary btn-outline-primary px-4 py-3">prendre RDV</a></p>
         		</div>
         	</div>
         </div>
@@ -400,51 +399,52 @@
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section ftco-animate text-center">
             <h2 class="mb-4">Articles recent de blog</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            
           </div>
         </div>
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('frontend2/images/b1.jpg');">
               </a>
               <div class="text py-4 d-block">
               	<div class="meta">
-                  <div><a href="#">Sept 10, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
+                  <div><a href="#"> 01 Decembre, 2020</a></div>
+                  <div><a href="#">Safi</a></div>
                   <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                 </div>
-                <h3 class="heading mt-2"><a href="#">Skin Care for Teen Skin</a></h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                <h3 class="heading mt-2">Peaux foncées : 3 astuces pour un teint lumineux<a href="#"></a></h3>
+                <p>On ne le dira jamais assez, mais un joli teint commence par une bonne hydratation. La crème hydratante, c’est chaque jour, matin et soir (attention, je te surveille), sur ...</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('frontend2/images/ch1.jpg');">
               </a>
               <div class="text py-4 d-block">
               	<div class="meta">
-                  <div><a href="#">Sept 10, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
+                  <div><a href="#">4 novembre, 2020</a></div>
+                  <div><a href="#">Safi</a></div>
                   <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                 </div>
-                <h3 class="heading mt-2"><a href="#">Skin Care for Teen Skin</a></h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                <h3 class="heading mt-2"><a href="#"> Beurres cosmétiques
+					Le beurre de karité pour cheveux crépus</a></h3>
+                <p>Comme on l’a vu plus haut, il va hydrater de manière excessivement bonne le cuir chevelu ainsi que les cheveux, ce qui renforce les follicules et réduira donc la perte de cheveux..</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('frontend2/images/image_3.jpg');">
               </a>
               <div class="text py-4 d-block">
               	<div class="meta">
-                  <div><a href="#">Sept 10, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
+                  <div><a href="#">10 septembre 2020</a></div>
+                  <div><a href="#">Safi</a></div>
                   <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                 </div>
-                <h3 class="heading mt-2"><a href="#">Skin Care for Teen Skin</a></h3>
+                <h3 class="heading mt-2"><a href="#">Ongles parfaits</a></h3>
                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
               </div>
             </div>
